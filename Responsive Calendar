@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Calendar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .calendar {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .calendar th, .calendar td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        .calendar th {
+            background-color: #f2f2f2;
+        }
+        @media screen and (max-width: 600px) {
+            .calendar thead {
+                display: none;
+            }
+            .calendar, .calendar tbody, .calendar tr, .calendar td {
+                display: block;
+                width: 100%;
+            }
+            .calendar tr {
+                margin-bottom: 15px;
+            }
+            .calendar td {
+                text-align: right;
+                padding-left: 50%;
+                position: relative;
+            }
+            .calendar td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 10px;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Dynamic Calendar</h1>
+
+    <h2>August 2024</h2>
+    <table class="calendar">
+        <thead>
+            <tr>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Friday"></td>
+                <td data-label="Saturday"></td>
+                <td data-label="Sunday"></td>
+                <td data-label="Monday"></td>
+                <td data-label="Tuesday"></td>
+                <td data-label="Wednesday"></td>
+                <td data-label="Thursday">1 <br> <a href="https://www.example.com/meeting">**Meeting** 📅</a></td>
+            </tr>
+            <tr>
+                <td data-label="Friday">2 <br> <a href="https://www.example.com/yoga">**Yoga Class** 🧘‍♂️</a></td>
+                <td data-label="Saturday">3 <br> <a href="https://www.example.com/workshop">**Workshop** 🛠️</a></td>
+                <td data-label="Sunday">4 <br> <a href="https://www.example.com/picnic">**Family Picnic** 🧺</a></td>
+                <td data-label="Monday">5 <br> <a href="https://www.example.com/deadline">**Project Deadline** ⏰</a></td>
+                <td data-label="Tuesday">6 <br> <a href="https://www.example.com/conference">**Conference Call** 📞</a></td>
+                <td data-label="Wednesday">7 <br> <a href="https://www.example.com/lunch">**Team Lunch** 🍽️</a></td>
+                <td data-label="Thursday">8 <br> <a href="https://www.example.com/webinar">**Webinar** 🌐</a></td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+
+    <h2>September 2024</h2>
+    <table class="calendar">
+        <thead>
+            <tr>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Friday"></td>
+                <td data-label="Saturday"></td>
+                <td data-label="Sunday">1 <br> <a href="https://www.example.com/cycling">**Cycling** 🚴</a></td>
+                <td data-label="Monday">2 <br> <a href="https://www.example.com/workshop">**Workshop** 🛠️</a></td>
+                <td data-label="Tuesday">3 <br> <a href="https://www.example.com/teambuilding">**Team Building** 🏢</a></td>
+                <td data-label="Wednesday">4 <br> <a href="https://www.example.com/yoga">**Yoga Class** 🧘‍♀️</a></td>
+                <td data-label="Thursday">5 <br> <a href="https://www.example.com/webinar">**Webinar** 🌐</a></td>
+            </tr>
+            <tr>
+                <td data-label="Friday">6 <br> <a href="https://www.example.com/doctor">**Doctor Appointment** 🏥</a></td>
+                <td data-label="Saturday">7 <br> <a href="https://www.example.com/party">**Birthday Party** 🎂</a></td>
+                <td data-label="Sunday">8 <br> <a href="https://www.example.com/hiking">**Hiking Trip** 🥾</a></td>
+                <td data-label="Monday">9 <br> <a href="https://www.example.com/meeting">**Client Meeting** 💼</a></td>
+                <td data-label="Tuesday">10 <br> <a href="https://www.example.com/gym">**Gym Session** 🏋️</a></td>
+                <td data-label="Wednesday">11 <br> <a href="https://www.example.com/coding">**Coding Session** 💻</a></td>
+                <td data-label="Thursday">12 <br> <a href="https://www.example.com/bookclub">**Book Club** 📚</a></td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+</body>
+</html>
